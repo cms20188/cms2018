@@ -27,12 +27,12 @@ CREATE TABLE `wp_users` (
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`),
   KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wp_users` WRITE;
 /*!40000 ALTER TABLE `wp_users` DISABLE KEYS */;
-INSERT INTO `wp_users` VALUES (1,'szefunio','$P$BV2C3FO/e3ZaBaPLrxJcsBbzqH/vuC.','szefunio','s14038@pjwstk.edu.pl','','2018-11-24 14:17:19','',0,'szefunio');
+INSERT INTO `wp_users` VALUES (1,'szefunio','$P$BV2C3FO/e3ZaBaPLrxJcsBbzqH/vuC.','szefunio','s14038@pjwstk.edu.pl','','2018-11-24 14:17:19','',0,'szefunio'),(3,'Autor1','$P$BEfLAWhCQQJWtswezWFWnnvBYqvijb0','autor1','u62azmplaoie@10minut.xyz','','2018-11-26 15:10:10','1543245010:$P$BcszBubleY21S4GgVbqGTmP/MnPgZg1',0,'Autor1'),(4,'marcin','$P$BLjGx4DYw5yt9auTO7TxnM0JiPgCKF0','marcin','marcin@marcin.marcin','','2018-11-28 17:59:08','',0,'Marcin'),(5,'janek','$P$BjNaK/70Sd7qAkSHFkFsyxPsp7zIOY/','janek','s14038@pja.edu.pl','','2018-11-28 18:17:14','',0,'Jan Domański');
 /*!40000 ALTER TABLE `wp_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

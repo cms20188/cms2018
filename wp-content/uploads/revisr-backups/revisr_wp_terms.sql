@@ -20,12 +20,12 @@ CREATE TABLE `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wp_terms` WRITE;
 /*!40000 ALTER TABLE `wp_terms` DISABLE KEYS */;
-INSERT INTO `wp_terms` VALUES (1,'Bez kategorii','bez-kategorii',0);
+INSERT INTO `wp_terms` VALUES (1,'Bez kategorii','bez-kategorii',0),(2,'Przepis','recipe',0),(4,'Ciasta i torty','cakes',0),(5,'Desery','desserts',0),(6,'Ciastka','cookies',0),(9,'Dania mięsne','dania-miesne',0),(10,'Dania bez mięsa','dania-bez-miesa',0),(11,'Dania rybne','dania-rybne',0),(12,'Surówki','surowki',0),(13,'owoce','owoce',0),(14,'łosoś','losos',0),(15,'main menu','main-menu',0),(16,'inne','inne',0);
 /*!40000 ALTER TABLE `wp_terms` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

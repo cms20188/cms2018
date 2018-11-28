@@ -9,26 +9,21 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `wp_term_taxonomy`;
+DROP TABLE IF EXISTS `wp_ufbl_entries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `wp_term_taxonomy` (
-  `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `term_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `taxonomy` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `description` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `parent` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `count` bigint(20) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`term_taxonomy_id`),
-  UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
-  KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+CREATE TABLE `wp_ufbl_entries` (
+  `entry_id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `form_id` mediumint(9) DEFAULT NULL,
+  `entry_detail` text COLLATE utf8mb4_unicode_520_ci,
+  `entry_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  UNIQUE KEY `entry_id` (`entry_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-LOCK TABLES `wp_term_taxonomy` WRITE;
-/*!40000 ALTER TABLE `wp_term_taxonomy` DISABLE KEYS */;
-INSERT INTO `wp_term_taxonomy` VALUES (1,1,'category','',0,0),(2,2,'category','',0,0),(4,4,'category','',5,1),(5,5,'category','',2,0),(6,6,'category','',5,0),(9,9,'category','',2,1),(10,10,'category','',2,0),(11,11,'category','',2,1),(12,12,'category','',2,0),(13,13,'post_tag','',0,1),(14,14,'post_tag','',0,1),(15,15,'nav_menu','',0,4),(16,16,'topic-tag','',0,1);
-/*!40000 ALTER TABLE `wp_term_taxonomy` ENABLE KEYS */;
+LOCK TABLES `wp_ufbl_entries` WRITE;
+/*!40000 ALTER TABLE `wp_ufbl_entries` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wp_ufbl_entries` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
